@@ -18,11 +18,11 @@ Emoji Desteği: 🎬🔍 ile samimi ve eğlenceli vibe.
 
 Giriş Ekranı
 
-<img src="(https://github.com/rojatkrty/flim_app/blob/main/flim_ss/Screenshot_1.png)" alt="login">
+<img src="https://github.com/rojatkrty/flim_app/blob/main/flim_ss/Screenshot_1.png" alt="login">
 
 Ana Ekran
 
-<img src="https://github.com/rojatkrty/flim_app/blob/main/flim_ss/main.png)" alt="main">
+<img src="https://github.com/rojatkrty/flim_app/blob/main/flim_ss/main.png" alt="main">
 
 
 Film Detay Ekranı
