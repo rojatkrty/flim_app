@@ -4,11 +4,11 @@ import webbrowser
 import os
 import logging
 
-# Set up logging for debugging
+
 logging.basicConfig(filename='film_app.log', level=logging.ERROR, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Film data with PNG cover images
+
 FILMLER = [
     {
         "baslik": "Inception",
@@ -223,18 +223,18 @@ class FilmApp:
         info = f"Yönetmen: {film['yonetmen']} | Tür: {film['tur']} | Süre: {film['sure']} dk"
         tk.Label(frame, text=info, font=("Helvetica", 12), fg="#555", bg="#ffffff").pack()
 
-        # Cover image
+        
         try:
             if os.path.exists(film["kapak_dosya"]):
                 img = tk.PhotoImage(file=film["kapak_dosya"])
                 img_label = tk.Label(frame, image=img, bg="#ffffff")
-                img_label.image = img  # Keep reference to prevent garbage collection
+                img_label.image = img  
                 img_label.pack(pady=20)
             else:
-                tk.Label(frame, text="⚠️ Kapak resmi bulunamadı.", fg="#dc3545", bg="#ffffff").pack(pady=20)
+                tk.Label(frame, text="⚠️ ", fg="#dc3545", bg="#ffffff").pack(pady=20)
         except Exception as e:
             logging.error(f"Image load error for {film['kapak_dosya']}: {str(e)}")
-            tk.Label(frame, text="⚠️ Kapak resmi yüklenemedi.", fg="#dc3545", bg="#ffffff").pack(pady=20)
+            tk.Label(frame, text="⚠️ ", fg="#dc3545", bg="#ffffff").pack(pady=20)
 
         tk.Button(
             frame, text="🎬 İzle", font=("Helvetica", 14, "bold"), bg="#007bff", fg="white",
